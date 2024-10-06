@@ -15,7 +15,7 @@ const userService = {
     }
   },
 
-  signup: async (userData: { email: string; password: string }) => {
+  signup: async (userData: { email: string; password: string ,restaurantDetails:object }) => {
     try {
       const response = await post('/auth/signup', userData); // Use the post utility for signup
       return response;

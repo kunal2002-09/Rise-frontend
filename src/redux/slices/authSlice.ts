@@ -14,13 +14,13 @@ const initialState = {
 };
 
 // Async Thunks
-export const login = createAsyncThunk('auth/login', async (userData: { email: string; password: string }) => {
+export const login = createAsyncThunk('auth/login', async (userData: { email: string; password: string, }) => {
   const response = await userService.login(userData);
   setTokenCookie('token', response.data.token); // Set token in cookie
   return response.data; // Return user data
 });
 
-export const signup = createAsyncThunk('auth/signup', async (userData: { email: string; password: string }) => {
+export const signup = createAsyncThunk('auth/signup', async (userData: { email: string; password: string,restaurantDetails:object }) => {
   const response = await userService.signup(userData);
   setTokenCookie('token', response.data.token); // Set token in cookie
   return response.data; // Return user data

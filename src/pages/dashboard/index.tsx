@@ -12,7 +12,7 @@ const Dashboard: React.FC = () => {
     <DashboardLayout pageTitle='Dashboard'>
       <h1>Dashboard</h1>
       <h1>Google Maps Places API Example</h1>
-      <GoogleMapComponent />
+      {/* <GoogleMapComponent /> */}
     </DashboardLayout>
   );
 };
