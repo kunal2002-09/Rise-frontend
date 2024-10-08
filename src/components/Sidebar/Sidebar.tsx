@@ -6,7 +6,7 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { useRouter } from 'next/router';
 import { useAppDispatch } from '../../redux/store'; // Adjust import if needed
 import { logout } from '../../redux/slices/authSlice';
-import './styles.css';
+import './styles.module.css';
 
 const Sidebar: React.FC = () => {
     const router = useRouter();

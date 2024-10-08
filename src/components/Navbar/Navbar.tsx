@@ -2,7 +2,7 @@ import React from 'react';
 import { useAppSelector, useAppDispatch } from '../../redux/store';
 import { logout } from '../../redux/slices/authSlice'; // Import the logout action
 import useNavigate from '../../utils/router'; // Adjust the import path as needed
-import './styles.css';
+import './styles.module.css';   
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate(); // Get the navigate function
