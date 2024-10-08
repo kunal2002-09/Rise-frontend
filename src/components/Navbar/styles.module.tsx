@@ -1,4 +1,9 @@
-.navbarWrapper{
+
+import css from 'styled-jsx/css';
+export default css`
+  @import 'src/public/styles/variables';
+  @import 'src/public/styles/mixins/mixins';
+  .navbarWrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,3 +28,4 @@
     display: flex;
     gap: 10px;
 }
+`

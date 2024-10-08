@@ -6,7 +6,8 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { useRouter } from 'next/router';
 import { useAppDispatch } from '../../redux/store'; // Adjust import if needed
 import { logout } from '../../redux/slices/authSlice';
-import './styles.module.css';
+import styles from './styles.module';
+
 
 const Sidebar: React.FC = () => {
     const router = useRouter();
@@ -24,6 +25,8 @@ const Sidebar: React.FC = () => {
     const drawerWidth = 240;
 
     return (
+        <>
+        <style jsx>{styles}</style>
         <div
             className='drawer'
         >
@@ -52,6 +55,7 @@ const Sidebar: React.FC = () => {
                 </ListItemButton>
             </List>
         </div>
+        </>
     );
 };
 

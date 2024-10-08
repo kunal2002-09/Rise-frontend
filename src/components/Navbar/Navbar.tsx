@@ -2,7 +2,7 @@ import React from 'react';
 import { useAppSelector, useAppDispatch } from '../../redux/store';
 import { logout } from '../../redux/slices/authSlice'; // Import the logout action
 import useNavigate from '../../utils/router'; // Adjust the import path as needed
-import './styles.module.css';   
+import styles from './styles.module';
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate(); // Get the navigate function
@@ -17,7 +17,9 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="navbarWrapper">
+    <>
+        <style jsx>{styles}</style>
+    <nav  className="navbarWrapper">
       <div className='logoSection'>
         <div className='logoWrapper' onClick={() => navigate('/')} >
           <div className='logoImg'>
@@ -46,6 +48,8 @@ const Navbar: React.FC = () => {
       </div>
 
     </nav>
+    </>
+
   );
 };
 
